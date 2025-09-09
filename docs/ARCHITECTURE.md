@@ -158,9 +158,10 @@ sequenceDiagram
 
 ### Development
 - **Package Manager**: npm
-- **Virtual Environment**: Python venv
+- **Virtual Environment**: Python venv (excluded from TypeScript)
 - **Version Control**: Git
 - **Deployment**: GitHub
+- **Build System**: Next.js with TypeScript exclusions for Python venv
 
 ---
 

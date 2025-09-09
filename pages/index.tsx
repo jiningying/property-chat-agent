@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import PropertyChatWidget from './components/PropertyChatWidget';
+import PropertyChatWidget from '../components/PropertyChatWidget';
 
 export default function HomePage() {
   const [isScrolled, setIsScrolled] = useState(false);

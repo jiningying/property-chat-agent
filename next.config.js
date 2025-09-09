@@ -2,22 +2,25 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    appDir: true,
-  },
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
   },
   env: {
     PARLANT_API_KEY: process.env.PARLANT_API_KEY,
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/parlant-chat',
-        destination: '/api/parlant-chat',
-      },
-    ];
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+  webpack: (config) => {
+    // Exclude Python virtual environment from webpack processing
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: ['**/venv/**', '**/node_modules/**'],
+    };
+    return config;
   },
 }
 

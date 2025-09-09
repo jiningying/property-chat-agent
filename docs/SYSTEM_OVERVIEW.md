@@ -70,6 +70,7 @@ PropertyMatch Pro
 │ Backend:      Python 3.13 + Parlant SDK 3.0.2                 │
 │ AI Engine:    OpenAI API (GPT/Llama/Claude/Gemini/DeepSeek)    │
 │ Development:  npm + Python venv + Git                          │
+│ Build:        Next.js with TypeScript exclusions for venv      │
 │ Deployment:   GitHub Repository + Local Development            │
 └─────────────────────────────────────────────────────────────────┘
 ```
