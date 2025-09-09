@@ -188,11 +188,11 @@ const realEstateContext = {
 async function callParlantAI(message: string, userId: string): Promise<any> {
   return new Promise((resolve, reject) => {
     const pythonProcess = spawn('python3', [
-      '/Users/jining.ying/jining/playground/ai-chat-agent/parlant_chat.py',
+      './backend/agents/parlant_chat.py',
       '--message', message,
       '--user-id', userId
     ], {
-      cwd: '/Users/jining.ying/jining/playground/ai-chat-agent'
+      cwd: process.cwd()
     });
 
     let output = '';
