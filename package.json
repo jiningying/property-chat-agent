@@ -8,12 +8,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "setup": "./setup.sh",
-    "test": "echo 'No tests specified' && exit 0",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf .next node_modules venv",
+    "setup": "./scripts/setup/setup.sh",
+    "setup-local": "./scripts/setup/setup-local.sh",
+    "test": "echo 'No tests specified' && exit 0",
+    "demo": "./scripts/development/run_automated.sh",
     "install-all": "npm install && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt",
-    "github-setup": "git init && git add . && git commit -m 'Initial commit: PropertyMatch Pro AI Chat Agent'"
+    "backend": "cd backend && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt",
+    "frontend": "npm install && npm run dev"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.10",

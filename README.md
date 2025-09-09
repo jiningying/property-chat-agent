@@ -41,37 +41,42 @@ git clone https://github.com/jiningying/property-chat-agent.git
 cd property-chat-agent
 ```
 
-2. **Set up Python environment**
+2. **Automated setup (Recommended)**
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+npm run setup
 ```
 
-3. **Set up environment variables**
+3. **Manual setup**
 ```bash
-# Option 1: Use the interactive setup
-./setup-local.sh
+# Set up environment variables
+npm run setup-local
 
-# Option 2: Manual setup
-cp env.example .env
-# Edit .env with your actual API credentials:
-# OPENAI_API_KEY=your-actual-api-key
-# OPENAI_BASE_URL=https://api.omnia.reainternal.net/v1
+# Install dependencies
+npm run install-all
 ```
 
-4. **Install Node.js dependencies**
+4. **Start the application**
 ```bash
-npm install
-```
-
-5. **Start the application**
-```bash
-# Option 1: Automated start
-./run_automated.sh
-
-# Option 2: Manual start
 npm run dev  # Frontend on http://localhost:3000
+```
+
+### Development Commands
+
+```bash
+# Frontend development
+npm run frontend
+
+# Backend development  
+npm run backend
+
+# Run demo
+npm run demo
+
+# Type checking
+npm run type-check
+
+# Clean build
+npm run clean
 ```
 
 ## 🏗️ Architecture
